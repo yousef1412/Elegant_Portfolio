@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elegant Hospitality | Luxury Stays & Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #fdfdfd;
+        color: #333;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Playfair Display", serif;
+      }
+      .hero-bg {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("Main.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      .section-fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .section-fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-bold text-gray-800 tracking-wider">
+          <div style="width: 100px;"><img src="logo.png" alt="EN"></div>
+        </a>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a
+            href="#about"
+            class="text-gray-600 hover:text-[#aa7942] transition duration-300"
+            >About Us</a
+          >
+          <a
+            href="#team"
+            class="text-gray-600 hover:text-[#aa7942] transition duration-300"
+            >Our Team</a
+          >
+          <a
+            href="#services"
+            class="text-gray-600 hover:text-[#aa7942] transition duration-300"
+            >Services</a
+          >
+          <a
+            href="#management"
+            class="text-gray-600 hover:text-[#aa7942] transition duration-300"
+            >Management</a
+          >
+          <a
+            href="#locations"
+            class="text-gray-600 hover:text-[#aa7942] transition duration-300"
+            >Presence</a
+          >
+          <a
+            href="#awards"
+            class="text-gray-600 hover:text-[#aa7942] transition duration-300"
+            >Awards</a
+          >
+          <a
+            href="#contact"
+            class="bg-[#aa7942] text-white px-4 py-2 rounded-md hover:bg-[#966935] transition duration-300"
+            >Contact</a
+          >
+          <!-- Language Switch -->
+          <a
+            href="Arabic_index.html"
+            class="ml-4 bg-[#aa7942] text-white px-4 py-2 rounded-md hover:bg-[#966935]"
+          >
+            عربي
+          </a>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-gray-800"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-4 6h4"
+            />
+          </svg>
+        </button>
+      </nav>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+        <a href="#about" class="block py-2 text-gray-600 hover:text-[#aa7942]"
+          >About Us</a
+        >
+        <a href="#team" class="block py-2 text-gray-600 hover:text-[#aa7942]"
+          >Our Team</a
+        >
+        <a
+          href="#services"
+          class="block py-2 text-gray-600 hover:text-[#aa7942]"
+          >Services</a
+        >
+        <a
+          href="#management"
+          class="block py-2 text-gray-600 hover:text-[#aa7942]"
+          >Management</a
+        >
+        <a
+          href="#locations"
+          class="block py-2 text-gray-600 hover:text-[#aa7942]"
+          >Presence</a
+        >
+        <a href="#awards" class="block py-2 text-gray-600 hover:text-[#aa7942]"
+          >Awards</a
+        >
+        <a
+          href="#contact"
+          class="block mt-2 bg-[#aa7942] text-white px-4 py-2 rounded-md text-center"
+          >Contact</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="hero-bg text-white h-[80vh] flex items-center justify-center"
+    >
+      <div class="text-center max-w-3xl mx-auto px-4">
+        <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-4">
+          Elegant Commitment to Excellence
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-8">
+          Pioneering luxury experiences and hotel management through
+          cutting-edge technology and modern design.
+        </p>
+        <a
+          href="#services"
+          class="bg-white text-[#aa7942] font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition duration-300"
+          >Explore Our Services</a
+        >
+      </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-16">
+      <!-- About Us Section -->
+      <section id="about" class="mb-24 section-fade-in">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">
+              About Elegant Hospitality
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Elegant is a leader in real estate technology and the future of
+              the hospitality sector in the Middle East. We offer luxurious
+              accommodation experiences in prime locations across Egypt, Saudi
+              Arabia, and Dubai. By leveraging advanced technology, we provide
+              seamless hospitality services and bookings, ensuring unparalleled
+              comfort and efficiency.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              With a strong foundation in hospitality and a passion for modern
+              design, we deliver high-quality accommodations that cater to the
+              refined tastes of our clients. Our portfolio includes exquisite
+              boutique hotels, upscale villas, and residential complexes,
+              alongside strategic partnerships with leading developers and
+              consulting firms.
+            </p>
+          </div>
+          <div class="order-1 md:order-2">
+            <img
+              src="Main.jpg"
+              alt="Modern and elegant interior design"
+              class="rounded-lg shadow-xl w-full h-auto"
+            />
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center mt-20">
+          <div>
+            <img
+              src="Vision.jpg"
+              alt="A person looking towards the horizon, symbolizing vision"
+              class="rounded-lg shadow-xl w-full h-auto"
+            />
+          </div>
+          <div>
+            <h3 class="text-3xl font-bold text-gray-800 mb-4">Our Vision</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              To revolutionize the holiday home and hospitality experience
+              across the Middle East, setting new standards for luxury, comfort,
+              and innovation through a comprehensive, app-based solution for all
+              our operations.
+            </p>
+            <h3 class="text-3xl font-bold text-gray-800 mb-4">Our Mission</h3>
+            <p class="text-gray-600 leading-relaxed">
+              To develop advanced hotels and boutique properties that leverage
+              the latest technology for smart, seamless services, making the
+              booking process for holiday homes and hotel apartments an
+              effortless and accessible experience.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Leadership & Team Section -->
+      <section
+        id="team"
+        class="mb-24 section-fade-in bg-gray-50 py-16 rounded-lg"
+      >
+        <div class="grid md:grid-cols-2 gap-12 items-center px-6">
+          <div class="order-2 md:order-1">
+            <h3 class="text-3xl font-bold text-gray-800 mb-4">
+              Meet Our Founder
+            </h3>
+            <p class="text-gray-700 font-semibold text-xl mb-4">
+              Ahmed El-Deeb
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              The mastermind behind the unique ELEGANT international hospitality
+              brand, Ahmed is distinguished by his dynamic approach to work and
+              talent for launching and nurturing new concepts. After receiving
+              his Bachelor's in Engineering from Southern Illinois University
+              and Master's from the University of Alabama, he honed his skills
+              in project management in Los Angeles.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Returning to Egypt, he dedicated himself to developing Elegant
+              Hospitality, with the primary goal of revolutionizing the region's
+              hospitality industry by leveraging technology to streamline
+              operations and deliver a seamless customer experience.
+            </p>
+          </div>
+          <div class="order-1 md:order-2">
+            <img
+              src="Profile.png"
+              alt="Ahmed El-Deeb, Founder of Elegant Hospitality"
+              class="rounded-lg shadow-xl w-full h-auto"
+            />
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center mt-16 px-6">
+          <div>
+            <img
+              src="Team.jpg"
+              alt="The Elegant Hospitality Team"
+              class="rounded-lg shadow-xl w-full h-auto"
+            />
+          </div>
+          <div>
+            <h3 class="text-3xl font-bold text-gray-800 mb-4">
+              Our Expert Team
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              We believe that people are the most important element in the
+              hospitality industry. The ELEGANT Hospitality team has extensive
+              experience, supported by a strong interior design team and
+              specialists in creating modern, stylish environments.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              We are committed to instilling strong market awareness and
+              financial discipline across all team members, alongside fostering
+              commitment through loyalty, a sense of belonging, and ownership.
+              Employee development, cross-training, and empowerment are key
+              elements of our success.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="mb-24 section-fade-in">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+          Our Comprehensive Services
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+          >
+            <h3 class="text-2xl font-bold text-[#aa7942] mb-4">
+              Hotel Development
+            </h3>
+            <p class="text-gray-600">
+              We see excellence and quality as essential components in
+              developing a hotel and establishing its market position, paying
+              close attention to every detail from amenities to service
+              concepts.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+          >
+            <h3 class="text-2xl font-bold text-[#aa7942] mb-4">
+              Boutique Hotel Management
+            </h3>
+            <p class="text-gray-600">
+              Our expertise allows us to lead on-site teams to realize the full
+              potential of any hotel property, valuing the brand loyalty that
+              comes from effective management and excellent relationships.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+          >
+            <h3 class="text-2xl font-bold text-[#aa7942] mb-4">
+              Hospitality Technology
+            </h3>
+            <p class="text-gray-600">
+              We sell our innovative software and provide a proprietary mobile
+              app for iOS & Android, allowing for easy viewing, keyless entry,
+              and seamless management of bookings and services.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+          >
+            <h3 class="text-2xl font-bold text-[#aa7942] mb-4">
+              Guest Relations & Front Office
+            </h3>
+            <p class="text-gray-600">
+              Welcoming guests warmly, managing check-in/check-out procedures
+              efficiently, and providing a dedicated information center for all
+              inquiries to ensure guest satisfaction.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+          >
+            <h3 class="text-2xl font-bold text-[#aa7942] mb-4">Housekeeping</h3>
+            <p class="text-gray-600">
+              Maintaining the daily cleanliness of rooms and public areas,
+              preparing rooms according to the highest hotel standards, and
+              offering laundry services upon request.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+          >
+            <h3 class="text-2xl font-bold text-[#aa7942] mb-4">Maintenance</h3>
+            <p class="text-gray-600">
+              An on-site team available daily to handle malfunctions, perform
+              periodic preventive maintenance, and ensure swift response times
+              to maintain guest comfort and safety.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Management Approach Section -->
+      <section id="management" class="mb-24 section-fade-in">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+          Our Management Approach
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+              Administrative Supervision
+            </h3>
+            <p class="text-gray-600">
+              Holding regular meetings with the operations team to analyze and
+              report monthly on the boutique hotel's performance and forecast
+              results with owners.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+              Sales & Marketing
+            </h3>
+            <p class="text-gray-600">
+              Monitoring hotel performance, its market position, and any changes
+              in competitor sets. We review and monitor sales and marketing
+              strategies and programs.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+              Recruitment & Training
+            </h3>
+            <p class="text-gray-600">
+              Conducting interviews and selecting employees. We train our staff
+              to create the best environment for both hotel guests and fellow
+              employees.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+              Organization & Budgeting
+            </h3>
+            <p class="text-gray-600">
+              Identifying strengths and weaknesses and suggesting alternative
+              methods that may be more profitable or economical. We review and
+              monitor costs to adjust performance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Locations Section -->
+      <section
+        id="locations"
+        class="mb-24 section-fade-in bg-gray-50 py-16 rounded-lg"
+      >
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+          Our Presence
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8 text-center px-4">
+          <div>
+            <img
+              src="dubai.jpg"
+              class="w-full h-48 object-cover rounded-md mb-4 shadow-md"
+            />
+            <h3 class="text-2xl font-semibold mb-2">Dubai, UAE</h3>
+            <p class="text-gray-600">
+              Operating at full capacity with strategic projects like Downtown
+              Views 1 & 2, directly opposite the famous Dubai Mall.
+            </p>
+          </div>
+          <div>
+            <img
+              src="suadi.jpg"
+              class="w-full h-48 object-cover rounded-md mb-4 shadow-md"
+            />
+            <h3 class="text-2xl font-semibold mb-2">Saudi Arabia</h3>
+            <p class="text-gray-600">
+              Establishing a strong digital presence with offices located in the
+              key cities of Riyadh and Jeddah.
+            </p>
+          </div>
+          <div>
+            <img
+              src="egypt.jpg"
+              class="w-full h-48 object-cover rounded-md mb-4 shadow-md"
+            />
+            <h3 class="text-2xl font-semibold mb-2">Egypt</h3>
+            <p class="text-gray-600">
+              Operating in prestigious locations, specifically within the
+              prominent Fifth Settlement area of Cairo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Awards Section -->
+      <section id="awards" class="mb-24 section-fade-in">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+          Recognized for Excellence
+        </h2>
+        <div class="flex flex-wrap justify-center gap-12 items-center">
+          <div class="text-center">
+            <div class="" style="width: 150px; margin-left: 38%;">
+            <img src="Booking.png" alt="Booking.com">
+            </div>
+            <h3 class="text-xl font-semibold">Guest Review Awards</h3>
+            <p class="text-gray-600">
+              Awarded from 2020 to 2024 for service quality and customer
+              satisfaction.
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="" style="width: 150px; margin-left: 38%; margin-bottom: 35px; margin-top: 20px;">
+              <img src="airbnb-superhost-seeklogo.png" alt="airbnb">
+            </div>
+            <h3 class="text-xl font-semibold">Superhost Status</h3>
+            <p class="text-gray-600">
+              Classified as a Superhost for our outstanding performance in unit
+              management.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white">
+      <div class="container mx-auto px-6 py-12 text-center">
+        <h2 class="text-3xl font-bold mb-4">
+          Let's Create Exceptional Experiences Together
+        </h2>
+        <p class="text-gray-300 max-w-2xl mx-auto mb-8">
+          We are committed to providing high-quality hotel management and
+          operational services that ensure the comfort and satisfaction of our
+          esteemed guests. Contact us to discuss any additional details or
+          inquiries.
+        </p>
+        <a
+          href="http://www.westayelegant.com"
+          target="_blank"
+          class="bg-[#aa7942] text-white font-semibold px-8 py-3 rounded-md hover:bg-[#966935] transition duration-300"
+          >Visit Our Website</a
+        >
+        <div class="mt-8 border-t border-gray-700 pt-6">
+          <p class="text-gray-400">
+            &copy; <span id="year"></span> Elegant Hospitality. All Rights
+            Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Set current year in footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Section fade-in on scroll
+      const sections = document.querySelectorAll(".section-fade-in");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
+
+      // Smooth scroll for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+          // Close mobile menu on click
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

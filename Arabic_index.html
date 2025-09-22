@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إليجانت للضيافة الفندقية | بورتفوليو</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background: #fdfdfd;
+        color: #333;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Playfair Display", serif;
+      }
+      .hero-bg {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("Main.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      .section-fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 0.6s;
+      }
+      .section-fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-bold text-gray-800 tracking-wider">
+          <div style="width: 100px"><img src="logo.png" alt="EN" /></div>
+        </a>
+        <div class="hidden md:flex space-x-8 rtl:space-x-reverse items-center">
+          <a href="#about" class="text-gray-600 hover:text-[#aa7942]"
+            >عن الشركة</a
+          >
+          <a href="#team" class="text-gray-600 hover:text-[#aa7942]">فريقنا</a>
+          <a href="#services" class="text-gray-600 hover:text-[#aa7942]"
+            >خدماتنا</a
+          >
+          <a href="#management" class="text-gray-600 hover:text-[#aa7942]"
+            >الإدارة</a
+          >
+          <a href="#locations" class="text-gray-600 hover:text-[#aa7942]"
+            >تواجدنا</a
+          >
+          <a href="#awards" class="text-gray-600 hover:text-[#aa7942]"
+            >الجوائز</a
+          >
+          <a
+            href="#contact"
+            class="bg-[#aa7942] text-white px-4 py-2 rounded-md hover:bg-[#966935]"
+            >تواصل معنا</a
+          >
+
+          <!-- Language Switch Button -->
+          <a
+            href="English_index.html"
+            class="ml-4 bg-[#aa7942] text-white px-4 py-2 rounded-md hover:bg-[#966935]"
+          >
+            En
+          </a>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-gray-800"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-4 6h4"
+            />
+          </svg>
+        </button>
+      </nav>
+      <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+        <a href="#about" class="block py-2 text-gray-600 hover:text-[#aa7942]"
+          >عن الشركة</a
+        >
+        <a href="#team" class="block py-2 text-gray-600 hover:text-[#aa7942]"
+          >فريقنا</a
+        >
+        <a
+          href="#services"
+          class="block py-2 text-gray-600 hover:text-[#aa7942]"
+          >خدماتنا</a
+        >
+        <a
+          href="#management"
+          class="block py-2 text-gray-600 hover:text-[#aa7942]"
+          >الإدارة</a
+        >
+        <a
+          href="#locations"
+          class="block py-2 text-gray-600 hover:text-[#aa7942]"
+          >تواجدنا</a
+        >
+        <a href="#awards" class="block py-2 text-gray-600 hover:text-[#aa7942]"
+          >الجوائز</a
+        >
+        <a
+          href="#contact"
+          class="block mt-2 bg-[#aa7942] text-white px-4 py-2 rounded-md text-center"
+          >تواصل معنا</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section
+      class="hero-bg text-white h-[80vh] flex items-center justify-center"
+    >
+      <div class="text-center max-w-3xl mx-auto px-4">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4">
+          إليجانت.. التزامنا بالتميّز
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-8">
+          نقود تجارب فاخرة وإدارة فندقية حديثة من خلال التكنولوجيا والتصميم
+          العصري.
+        </p>
+        <a
+          href="#services"
+          class="bg-white text-[#aa7942] font-semibold px-8 py-3 rounded-md hover:bg-gray-100"
+          >استكشف خدماتنا</a
+        >
+      </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-16">
+      <!-- About -->
+      <section id="about" class="mb-24 section-fade-in">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-4xl font-bold mb-6">عن إليجانت</h2>
+            <p class="text-gray-600 mb-4">
+              إليجانت هي شركة رائدة في مجال دمج التكنولوجيا مع الضيافة في الشرق
+              الأوسط. نقدم تجارب إقامة فاخرة في مواقع متميزة داخل مصر والسعودية
+              ودبي.
+            </p>
+            <p class="text-gray-600">
+              محفظتنا تشمل فنادق بوتيك، شقق فندقية، وفيلات فاخرة، إلى جانب
+              شراكات استراتيجية مع مطورين واستشاريين بارزين.
+            </p>
+          </div>
+          <div>
+            <img
+              src="Main.jpg"
+              class="rounded-lg shadow-xl w-full h-auto"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center mt-20">
+          <div>
+            <img
+              src="Vision.jpg"
+              class="rounded-lg shadow-xl w-full h-auto"
+              alt=""
+            />
+          </div>
+          <div>
+            <h3 class="text-3xl font-bold mb-4">رؤيتنا</h3>
+            <p class="text-gray-600 mb-4">
+              إحداث ثورة في تجربة منازل العطلات والضيافة عبر حلول رقمية متكاملة،
+              ووضع معايير جديدة للرفاهية والابتكار.
+            </p>
+            <h3 class="text-3xl font-bold mb-4">مهمتنا</h3>
+            <p class="text-gray-600">
+              تطوير فنادق وشقق بوتيك حديثة تعتمد على أحدث التقنيات لتقديم خدمات
+              ذكية وسلسة.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team -->
+      <section
+        id="team"
+        class="mb-24 section-fade-in bg-gray-50 py-16 rounded-lg"
+      >
+        <div class="grid md:grid-cols-2 gap-12 items-center px-6">
+          <div>
+            <h3 class="text-3xl font-bold mb-4">مؤسسنا</h3>
+            <p class="text-xl font-semibold text-gray-700 mb-4">أحمد الديب</p>
+            <p class="text-gray-600 mb-4">
+              المؤسس والمدير التنفيذي لشركة Elegant Hospitality، أحمد الديب، واحد من الناس اللي عندهم رؤية مختلفة للضيافة في الشرق الأوسط. بخبرته الكبيرة وحبه للتجديد
+              ، قدر يحوّل أفكار بسيطة لمشاريع ناجحة في مصر ودبي والسعودية. أحمد بدأ مشواره بعد ما خلص بكالوريوس الهندسة من جامعة ساوثرن إلينوي وماجستير من جامعة ألاباما
+              ، وبعدها اشتغل فترة في لوس أنجلوس وطور نفسه في إدارة المشروعات. رجع مصر ومعاه خبرة عالمية ورغبة يغير شكل صناعة الضيافة عندنا من خلال التكنولوجيا والتصميم العصري.
+            </p>
+            <p class="text-gray-600">
+              ولما رجع مصر، ركّز كل مجهوده في تطوير Elegant Hospitality بهدف إنه يغير شكل صناعة الضيافة في الشرق الأوسط. رؤيته كانت إنه يستخدم التكنولوجيا عشان يسهل العمليات ويوفر تجربة سلسة ومميزة لكل ضيف.
+            </p>
+          </div>
+          <div>
+            <img
+              src="Profile.png"
+              class="rounded-lg shadow-xl w-full h-auto"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center mt-16 px-6">
+          <div>
+            <img
+              src="Team.jpg"
+              class="rounded-lg shadow-xl w-full h-auto"
+              alt=""
+            />
+          </div>
+          <div>
+            <h3 class="text-3xl font-bold mb-4">فريقنا</h3>
+            <p class="text-gray-600 mb-4">
+              نؤمن أن العنصر البشري هو الأساس في صناعة الضيافة. يضم فريقنا خبرات
+              واسعة مدعومة بمهارات التصميم الداخلي وبناء بيئات عصرية.
+            </p>
+            <p class="text-gray-600">
+              نركز على تنمية الموظفين، التدريب المتقاطع، وغرس الانتماء
+              والمسؤولية لتحقيق النجاح المستدام.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="mb-24 section-fade-in">
+        <h2 class="text-4xl font-bold text-center mb-12">خدماتنا</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl">
+            <h3 class="text-2xl font-bold text-[#aa7942] mb-4">
+              تطوير الفنادق
+            </h3>
+            <p class="text-gray-600">
+              نهتم بأدق التفاصيل لضمان التميز والقدرة التنافسية في السوق.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl">
+            <h3 class="text-2xl font-bold text-[#aa7942] mb-4">
+              إدارة الفنادق البوتيك
+            </h3>
+            <p class="text-gray-600">
+              إدارة تشغيلية متكاملة تضمن تحقيق أقصى إمكانيات العقار.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl">
+            <h3 class="text-2xl font-bold text-[#aa7942] mb-4">
+              التكنولوجيا الفندقية
+            </h3>
+            <p class="text-gray-600">
+              تطبيق ذكي للحجز، الدخول بدون مفتاح، وخدمات متكاملة للنزلاء.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl">
+            <h3 class="text-2xl font-bold text-[#aa7942] mb-4">
+              العلاقات مع النزلاء
+            </h3>
+            <p class="text-gray-600">
+              استقبال احترافي وإدارة فعالة لتجربة النزيل.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl">
+            <h3 class="text-2xl font-bold text-[#aa7942] mb-4">
+              خدمات النظافة
+            </h3>
+            <p class="text-gray-600">
+              تنظيف يومي وتحضير الغرف وفق أعلى المعايير.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl">
+            <h3 class="text-2xl font-bold text-[#aa7942] mb-4">الصيانة</h3>
+            <p class="text-gray-600">
+              فريق صيانة متواجد يومياً لضمان الراحة والأمان.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Management -->
+      <section id="management" class="mb-24 section-fade-in">
+        <h2 class="text-4xl font-bold text-center mb-12">نهجنا الإداري</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-3">الإشراف الإداري</h3>
+            <p class="text-gray-600">
+              اجتماعات دورية وتحليل الأداء مع الملاك والتوقعات المستقبلية.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-3">المبيعات والتسويق</h3>
+            <p class="text-gray-600">
+              متابعة السوق واستراتيجيات التسويق لضمان التنافسية.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-3">التوظيف والتدريب</h3>
+            <p class="text-gray-600">
+              اختيار الكفاءات وتنمية مهارات الفريق باستمرار.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-3">الميزانية والتنظيم</h3>
+            <p class="text-gray-600">
+              مراجعة التكاليف والبحث عن طرق بديلة لزيادة الأرباح.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Locations -->
+      <section
+        id="locations"
+        class="mb-24 section-fade-in bg-gray-50 py-16 rounded-lg"
+      >
+        <h2 class="text-4xl font-bold text-center mb-12">تواجدنا</h2>
+        <div class="grid md:grid-cols-3 gap-8 text-center px-4">
+          <div>
+            <img
+              src="dubai.jpg"
+              class="w-full h-48 object-cover rounded-md mb-4 shadow-md"
+              alt=""
+            />
+            <h3 class="text-2xl font-semibold mb-2">دبي</h3>
+            <p class="text-gray-600">مشاريع استراتيجية قرب دبي مول.</p>
+          </div>
+          <div>
+            <img
+              src="suadi.jpg"
+              class="w-full h-48 object-cover rounded-md mb-4 shadow-md"
+              alt=""
+            />
+            <h3 class="text-2xl font-semibold mb-2">السعودية</h3>
+            <p class="text-gray-600">مكاتب في الرياض وجدة مع حضور رقمي قوي.</p>
+          </div>
+          <div>
+            <img
+              src="egypt.jpg"
+              class="w-full h-48 object-cover rounded-md mb-4 shadow-md"
+              alt=""
+            />
+            <h3 class="text-2xl font-semibold mb-2">مصر</h3>
+            <p class="text-gray-600">التجمع الخامس بالقاهرة الجديدة.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Awards -->
+      <section id="awards" class="mb-24 section-fade-in">
+        <h2 class="text-4xl font-bold text-center mb-12">الجوائز والتكريم</h2>
+        <div class="flex flex-wrap justify-center gap-12 items-center">
+          <div class="text-center">
+            <div class="" style="width: 150px; margin: 42px; margin-bottom: 5px;">
+              <img src="Booking.png" alt="Booking.com" />
+            </div>
+            <h3 class="text-xl font-semibold">جوائز تقييم الضيوف</h3>
+            <p class="text-gray-600">من 2020 حتى 2024 لتميز الخدمة.</p>
+          </div>
+          <div class="text-center">
+            <div
+              class=""
+              style="width: 150px; margin: 42px;"
+            >
+              <img src="airbnb-superhost-seeklogo.png" alt="airbnb" />
+            </div>
+            <h3 class="text-xl font-semibold">Superhost</h3>
+            <p class="text-gray-600">
+              اعتراف بأدائنا المتميز في إدارة الوحدات.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white">
+      <div class="container mx-auto px-6 py-12 text-center">
+        <h2 class="text-3xl font-bold mb-4">تواصل معنا</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto mb-8">
+          ملتزمون بتقديم خدمات فندقية عالية الجودة تضمن راحة ورضا ضيوفنا الكرام.
+        </p>
+        <a
+          href="http://www.westayelegant.com"
+          target="_blank"
+          class="bg-[#aa7942] text-white font-semibold px-8 py-3 rounded-md hover:bg-[#966935]"
+          >الموقع الرسمي</a
+        >
+        <div class="mt-8 border-t border-gray-700 pt-6">
+          <p class="text-gray-400">
+            &copy; <span id="year"></span> إليجانت للضيافة. جميع الحقوق محفوظة.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", () => {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const sections = document.querySelectorAll(".section-fade-in");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      sections.forEach((s) => observer.observe(s));
+    </script>
+  </body>
+</html>
